@@ -65,8 +65,9 @@ PRODUCT_COPY_FILES += \
 # ANT
 PRODUCT_PACKAGES += \
     AntHalService \
-    com.dsi.ant.antradio_library \
-    libantradio
+    libantradio \
+    antradio_app \
+    libvolumelistener
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -106,6 +107,10 @@ PRODUCT_PACKAGES += \
     memtrack.msm8937 \
     liboverlay
 
+# Doze
+PRODUCT_PACKAGES += \
+    XiaomiDoze
+
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
@@ -121,6 +126,11 @@ PRODUCT_PACKAGES += \
 # Fs_config
 PRODUCT_PACKAGES += \
     fs_config_files
+
+# FST Manager
+PRODUCT_PACKAGES += \
+    fstman \
+    fstman.ini
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -150,10 +160,6 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
-# Doze
-PRODUCT_PACKAGES += \
-    XiaomiDoze
-
 # IRQ
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
@@ -164,7 +170,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8937
+    lights.qcom
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -189,16 +195,15 @@ PRODUCT_PACKAGES += \
     libOmxSwVencHevc \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw
+    libdivxdrmdecrypt \
+    libextmedia_jni \
+    libstagefrighthw \
+    libstagefright_soft_flacenc \
+    libOmxVidcCommon
 
 # Power
 PRODUCT_PACKAGES += \
     power.msm8937
-
-# Tools
-PRODUCT_PACKAGES += \
-    libjson \
-    libtinyxml2
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -235,7 +240,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librmnetctl \
     libcnefeatureconfig \
-    libxml2
+    libxml2 \
+    libprotobuf-cpp-full
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -248,6 +254,20 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
+
+# Tools
+PRODUCT_PACKAGES += \
+    libjson \
+    libtinyxml2
+
+# TCM
+PRODUCT_PACKAGES += \
+    tcmiface
+
+# FST Manager
+PRODUCT_PACKAGES += \
+    fstman \
+    fstman.ini
 
 # Wifi
 PRODUCT_PACKAGES += \
