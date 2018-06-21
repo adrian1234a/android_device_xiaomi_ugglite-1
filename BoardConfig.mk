@@ -20,7 +20,6 @@ TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8937
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno308
 
 # Architecture
 TARGET_ARCH := arm64
@@ -38,7 +37,6 @@ TARGET_2ND_CPU_VARIANT := kryo
 TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
-#BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
 
 TARGET_USE_SDCLANG := true
@@ -119,21 +117,8 @@ BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 # CNE / DPM
 BOARD_USES_QCNE := true
 
-# Cpusets
-ENABLE_CPUSETS := true
-
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
-
-# Dexpreopt
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := false
-    endif
-  endif
-endif
-WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 
 # Display
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
@@ -147,6 +132,7 @@ USE_OPENGL_RENDERER := true
 
 # Double Tap To Wake
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/soc/78b7000.i2c/i2c-3/3-0038//input/input2/device/fts_gesture_mode"
+TARGET_TAP_TO_WAKE_NODE := "/sys/goodix_gesture/gesture_enable"
 
 # Filesystem
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -160,10 +146,12 @@ BOARD_HAVE_QCOM_FM := true
 USE_DEVICE_SPECIFIC_GPS := true
 TARGET_NO_RPC := true
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_ugglite
 TARGET_RECOVERY_DEVICE_MODULES := libinit_ugglite
-TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
@@ -181,11 +169,11 @@ BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 BLOCK_BASED_OTA := true
 
+# Wrapper
+BOARD_USES_LIBC_WRAPPER := true
+
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
-
-# Power
-TARGET_POWERHAL_VARIANT := qcom
 
 # Properties
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
