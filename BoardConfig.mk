@@ -149,6 +149,9 @@ PROTOBUF_SUPPORTED := true
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
 
+# Power
+TARGET_POWERHAL_VARIANT := none
+
 # Sensor
 USE_SENSOR_MULTI_HAL := true
 
