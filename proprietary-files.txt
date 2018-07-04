@@ -45,6 +45,8 @@ vendor/lib/libhwdaphal.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libqct_resampler.so
 vendor/lib/libsurround_3mic_proc.so
+vendor/lib/libaudioparsers.so
+vendor/lib64/libaudioparsers.so
 lib/hw/audio.primary.msm8937.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
@@ -123,14 +125,7 @@ vendor/lib64/libbtnv.so
 vendor/lib/libbt-vendor.so
 vendor/lib64/libbt-vendor.so
 
-# other firmware
-etc/firmware/leia_pm4_470.fw
-etc/firmware/leia_pfp_470.fw
-etc/firmware/hbtp/hbtpcfg_8917.dat
-etc/firmware/hbtp/hbtpcfg.dat
-etc/firmware/hbtp/qtc800s_dsp.bin
-
-# Bluetooth firmware
+# Bluetooth Firmware
 etc/firmware/nvm_tlv.bin
 etc/firmware/nvm_tlv_1.3.bin
 etc/firmware/nvm_tlv_2.1.bin
@@ -195,6 +190,9 @@ lib/libsigchain.so
 lib64/libmorpho_memory_allocator.so
 lib64/libmorpho_panorama.so
 lib64/libsigchain.so
+vendor/lib64/libChamomilePA.so
+vendor/lib/libflash_gpio.so
+vendor/lib/libjni_dualcamera.so
 vendor/lib/libChamomilePA.so
 vendor/lib/libFaceGrade.so
 vendor/lib/libFaceProc.so
@@ -415,7 +413,7 @@ vendor/lib64/libmorpho_panorama_gp.so
 -vendor/lib/libts_detected_face_hal.so
 -vendor/lib/libts_face_beautify_hal.so
 
-# Camera actuators
+# Camera Actuators
 vendor/lib/libactuator_ad5816g.so
 vendor/lib/libactuator_ad5823.so
 vendor/lib/libactuator_ak7345.so
@@ -434,7 +432,7 @@ vendor/lib/libactuator_ak7372_ulysse.so
 vendor/lib/libactuator_dw9763_ov12a10_sunny.so
 vendor/lib/libactuator_fp5510_f13855bd.so
 
-# Camera chromatix
+# Camera Chromatix
 vendor/lib/libchromatix_ov12a10_4K.so
 vendor/lib/libchromatix_ov12a10_4K_preview_dw9763.so
 vendor/lib/libchromatix_ov12a10_4K_video_dw9763.so
@@ -2037,7 +2035,7 @@ vendor/lib/libchromatix_s5k3m2xx_zsl_preview_ad5816g.so
 vendor/lib/libchromatix_s5k3m2xx_zsl_video_ad5816g.so
 
 
-# Camera configs
+# Camera Configs
 etc/camera/camera_config.xml
 etc/camera/csidtg_camera.xml
 etc/camera/imx214_chromatix.xml
@@ -2101,7 +2099,7 @@ etc/camera/s5k5e8_f5e8ybf_qtech_d6_chromatix_india.xml
 etc/camera/s5k5e8_oef0501_ofilm_d6_chromatix.xml
 etc/camera/s5k5e8_oef0501_ofilm_d6_chromatix_india.xml
 
-# Camera firmware
+# Camera Firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
@@ -2113,7 +2111,7 @@ etc/firmware/cpp_firmware_v1_8_0.fw
 etc/firmware/cpp_firmware_v1_10_0.fw
 etc/firmware/cpp_firmware_v1_12_0.fw
 
-# Camera sensors
+# Camera Sensors
 vendor/lib/libmmcamera_isp_abf40.so
 vendor/lib/libmmcamera_isp_bcc40.so
 vendor/lib/libmmcamera_isp_be_stats44.so
@@ -2153,7 +2151,7 @@ vendor/lib/lib_lowlight.so
 # Charger
 bin/hvdcp_opti
 
-# Consumer Ir
+# ConsumerIR
 lib/hw/consumerir.default.so
 lib64/hw/consumerir.default.so
 
@@ -2199,6 +2197,21 @@ vendor/lib64/libsecureuisvc_jni.so
 vendor/lib64/libssd.so
 vendor/lib64/libtzdrmgenprov.so
 
+# Disk Interface
+vendor/lib64/libCommandSvc.so
+vendor/lib64/libExtendedExtractor.so
+vendor/lib64/libFileMux.so
+vendor/lib/libSampleAuthJNI.so
+vendor/lib/libSampleExtAuthJNI.so
+vendor/lib64/libSampleAuthJNI.so
+vendor/lib64/libSampleExtAuthJNI.so
+vendor/lib64/libmmwfdinterface.so
+vendor/lib64/libmmwfdsinkinterface.so
+vendor/lib64/libmmwfdsrcinterface.so
+vendor/lib/libmmwfdinterface.so
+vendor/lib/libmmwfdsinkinterface.so
+vendor/lib/libmmwfdsrcinterface.so
+
 # FIDO
 vendor/lib/libFidoCrypto.so
 vendor/lib/libFidoCryptoJNI.so
@@ -2208,6 +2221,9 @@ vendor/lib64/libFidoCrypto.so
 vendor/lib64/libFidoCryptoJNI.so
 vendor/lib64/libFIDOKeyProvisioning.so
 vendor/lib64/libFidoSuiJNI.so
+
+# FM Radio
+bin/fm_qsoc_patches
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8937.so
@@ -2390,6 +2406,10 @@ vendor/lib64/libhbtpdsp.so
 vendor/lib64/libhbtpfrmwk.so
 vendor/lib64/libhbtpjni.so
 
+# HBTP Firmware
+etc/firmware/hbtp/hbtpcfg_8917.dat
+etc/firmware/hbtp/hbtpcfg.dat
+
 # Ipacm
 bin/ipacm-diag
 
@@ -2405,6 +2425,11 @@ lib64/hw/lights.msm8937.so
 vendor/lib/hw/sound_trigger.primary.msm8937.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
+
+# MDTP
+vendor/bin/mdtpd
+vendor/lib/libmdtp_crypto.so 
+vendor/lib64/libmdtp_crypto.so
 
 # Media
 etc/firmware/DE.o.msm8937
@@ -2434,6 +2459,21 @@ vendor/lib64/libFlacSwDec.so
 vendor/lib64/libMpeg4SwEncoder.so
 vendor/media/LMspeed_508.emd
 vendor/media/PFFprec_600.emd
+vendor/lib/libmmhttpstack.so
+vendor/lib/libmmparser.so
+vendor/lib/libmmparser_lite.so
+vendor/lib/libmmrtpdecoder.so
+vendor/lib/libmmrtpencoder.so
+vendor/lib/libpvr.so
+vendor/lib/librmp.so
+vendor/lib/librpmb.so
+vendor/lib64/libmmhttpstack.so
+vendor/lib64/libmmparser.so
+vendor/lib64/libmmparser_lite.so
+vendor/lib64/libmmrtpdecoder.so
+vendor/lib64/libmmrtpencoder.so
+vendor/lib64/libpvr.so
+vendor/lib64/librmp.so
 
 # MMI
 vendor/lib/libmmi.so
@@ -2500,9 +2540,6 @@ vendor/lib/libQtiTether.so
 vendor/lib64/libconnctrl.so
 vendor/lib64/libQtiTether.so
 
-# Display calibration
-
-
 # Perf
 bin/iop
 bin/msm_irqbalance
@@ -2528,6 +2565,11 @@ framework/com.qti.snapdragon.sdk.display.jar
 -vendor/app/colorservice/colorservice.apk
 vendor/bin/mm-pp-dpps
 vendor/lib64/libdisp-aba.so
+
+# Qualcomm firmware
+etc/firmware/leia_pm4_470.fw
+etc/firmware/leia_pfp_470.fw
+etc/firmware/hbtp/qtc800s_dsp.bin
 
 # QMI
 bin/irsc_util
@@ -2648,9 +2690,6 @@ vendor/lib64/libimsmedia_jni.so
 vendor/lib64/librcc.so
 vendor/lib64/libvoice-svc.so
 
-# FM Radio
-bin/fm_qsoc_patches
-
 # Sensors
 bin/sensors.qcom
 vendor/lib/hw/activity_recognition.msm8937.so
@@ -2664,10 +2703,11 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/sensor_calibrate.so
 vendor/lib64/sensors.ssc.so
 
-# Subsystem restart
+# SSR
 bin/ssr_diag
+vendor/lib64/libSubSystemShutdown.so
 
-#SCVE
+# SCVE
 vendor/lib/libscveBlobDescriptor.so
 vendor/lib/libscveBlobDescriptor_stub.so
 vendor/lib/libscveCleverCapture.so
@@ -2724,7 +2764,7 @@ vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Time services
+# Time Services
 -app/TimeService/TimeService.apk
 bin/time_daemon
 -vendor/lib/libtime_genoff.so
@@ -2732,14 +2772,15 @@ vendor/lib/libTimeService.so
 -vendor/lib64/libtime_genoff.so
 vendor/lib64/libTimeService.so
 
-# vendor apps
-
+# Services
 -vendor/app/CABLService/CABLService.apk
 -vendor/app/colorservice/colorservice.apk
 -vendor/app/SVIService/SVIService.apk
 
+# USB
+etc/firmware/ice40.bin
 
-#WFD
+# WFD
 bin/wfdservice
 vendor/lib/libwfdavenhancements.so
 vendor/lib/libwfdcommonutils.so
@@ -2772,10 +2813,7 @@ vendor/lib64/libwfduibcsinkinterface.so
 vendor/lib64/libwfduibcsrc.so
 vendor/lib64/libwfduibcsrcinterface.so
 
-# USB
-etc/firmware/ice40.bin
-
-# Widevine - from onePlus3
+# Widevine
 vendor/lib/mediadrm/libwvdrmengine.so|70419ce1f8eb6bd3aa36234f8d7e8003569efc9c
 vendor/lib/qcdrm/playready/lib/drm/libdrmprplugin_customer.so
 vendor/lib/qcdrm/playready/lib/libprdrmdecrypt_customer.so
@@ -2783,68 +2821,8 @@ vendor/lib/qcdrm/playready/lib/libtzplayready_customer.so
 vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmdecrypt_customer.so
 vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmplugin_customer.so
 
-# Mdtp
-vendor/bin/mdtpd
-vendor/lib/libmdtp_crypto.so 
-vendor/lib64/libmdtp_crypto.so
-
-# Wi-Fi
+# Wlan
 bin/cnss-daemon
 bin/cnss_diag
 bin/wcnss_service
 bin/fstman
-
-# Fingerprint
-etc/firmware/fpctzappfingerprint.b00
-etc/firmware/fpctzappfingerprint.b01
-etc/firmware/fpctzappfingerprint.b02
-etc/firmware/fpctzappfingerprint.b03
-etc/firmware/fpctzappfingerprint.b04
-etc/firmware/fpctzappfingerprint.b05
-etc/firmware/fpctzappfingerprint.b06
-etc/firmware/fpctzappfingerprint.mdt
-etc/firmware/goodixfp.b00
-etc/firmware/goodixfp.b01
-etc/firmware/goodixfp.b02
-etc/firmware/goodixfp.b03
-etc/firmware/goodixfp.b04
-etc/firmware/goodixfp.b05
-etc/firmware/goodixfp.b06
-etc/firmware/goodixfp.mdt
-
-# To-Do
-vendor/lib/libaudioparsers.so
-vendor/lib/libflash_gpio.so
-vendor/lib/libjni_dualcamera.so
-vendor/lib/libmmhttpstack.so
-vendor/lib/libmmparser.so
-vendor/lib/libmmparser_lite.so
-vendor/lib/libmmrtpdecoder.so
-vendor/lib/libmmrtpencoder.so
-vendor/lib/libmmwfdinterface.so
-vendor/lib/libmmwfdsinkinterface.so
-vendor/lib/libmmwfdsrcinterface.so
-vendor/lib/libpvr.so
-vendor/lib/librmp.so
-vendor/lib/librpmb.so
-vendor/lib/libSampleAuthJNI.so
-vendor/lib/libSampleExtAuthJNI.so
-vendor/lib64/libChamomilePA.so
-vendor/lib64/libCommandSvc.so
-vendor/lib64/libExtendedExtractor.so
-vendor/lib64/libFileMux.so
-vendor/lib64/libSubSystemShutdown.so
-vendor/lib64/libaudioparsers.so
-vendor/lib64/libmmhttpstack.so
-vendor/lib64/libmmparser.so
-vendor/lib64/libmmparser_lite.so
-vendor/lib64/libmmrtpdecoder.so
-vendor/lib64/libmmrtpencoder.so
-vendor/lib64/libmmwfdinterface.so
-vendor/lib64/libmmwfdsinkinterface.so
-vendor/lib64/libmmwfdsrcinterface.so
-vendor/lib64/libpvr.so
-vendor/lib64/librmp.so
-vendor/lib64/libSampleAuthJNI.so
-vendor/lib64/libSampleExtAuthJNI.so
-
